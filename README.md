@@ -10,15 +10,16 @@
 | Role in NLP      | Initial step in text processing.               | Used after tokenization for feature extraction and input to models. |
 | Examples         | Splitting "Hello world!" into ["Hello", "world", "!"]. | Representing "Hello" as [0.25, -0.14, 0.44, ...]. |
 | Techniques       | Word-level, subword-level (BPE, WordPiece), character-level. | Word2Vec, GloVe, FastText, BERT embeddings. |
-| Data Dependency  | Does not inherently learn from data; it's a rule-based or deterministic process. | Learned from large corpora to capture contextual information. |
+| Data Dependency  | Does not inherently learn from data; it's a rule-based or deterministic process. | Learned from a large corpora to capture contextual information. |
 | Flexibility      | Less flexible, depends on predefined rules.    | Highly flexible, adapts to various contexts and uses. |
 | Computational Complexity | Low complexity, simple to implement.     | Higher complexity, requires training on large datasets. |
+| Visualization Tool | https://www.pinecone.io/learn/tokenization/ | https://docs.wandb.ai/guides/app/features/panels/query-panel/embedding-projector |
 
 ### Visualization
 
 1. **Visualizing embeddings in 2D/3D:** In the 3D plot, it starts appearing to eyes that very few negative (1/2 starred) reviews are clearly separable from positive (4/5 starred) reviews but many others are embedded in tight neighbouring or shared spaces. You wish we could do the visualization exercise in one more dimension and maybe the separation boxes/planes/lines would be clearer for more data points.
 
-    - [W&B Embedding Projector tool](https://docs.wandb.ai/guides/app/features/panels/query-panel/embedding-projector): E.g. [W&B Embedding Projector to visualize OpenAI Embeddings alongside the Amazon food reviews data that produced them](https://wandb.ai/_scott/openai_embeddings/reports/OpenAI-Embeddings-Table--VmlldzozNDYxNjkx)
+    - W&B Embedding Projector tool: E.g. [W&B Embedding Projector to visualize OpenAI Embeddings alongside the Amazon food reviews data that produced them](https://wandb.ai/_scott/openai_embeddings/reports/OpenAI-Embeddings-Table--VmlldzozNDYxNjkx)
 
 2. **Chunking:** Every tokenizer or GPT model has a token limit (i.e. a maximum input length), so chunking helps in breaking text to process larger texts that exceed this limit, and it also allows concurrent processing potentially speeding up the overall processing time. E.g. [to translate a book](https://github.com/openai/openai-cookbook/blob/main/examples/book_translation/translate_latex_book.ipynb), we will first split the book into chunks, each roughly a page long, then translate each chunk, and finally stitch them back together.
 
