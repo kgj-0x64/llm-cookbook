@@ -2,6 +2,14 @@
 
 ## Embeddings
 
+### Word Vector
+
+1. [Word2Vec Tutorial - The Skip-Gram Model - By Chris McCormick](https://mccormickml.com/2016/04/19/word2vec-tutorial-the-skip-gram-model/)
+2. [Word2Vec Tutorial Part 2 - Negative Sampling - By Chris McCormick](https://mccormickml.com/2017/01/11/word2vec-tutorial-part-2-negative-sampling/)
+3. [Coding Word2vec from Scratch](https://jaketae.github.io/study/word2vec/)
+
+### Summary
+
 | Aspect           | Tokenization                                   | Embeddings                                      |
 |------------------|------------------------------------------------|-------------------------------------------------|
 | Definition       | The process of splitting text into smaller units (tokens) such as words, subwords, or characters. | The representation of tokens as dense vectors in a continuous vector space. |
