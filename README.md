@@ -67,6 +67,12 @@ While sequence embeddings can compress meaning to some extent, they still provid
 
 2. **Multi-Class Classification:** Data has mostly unique users interacting with unique products. Representing a user as an average (or weighted average) of products (rather product embeddings) they have interacted with in the training set concludes in a weak correlation of similarity between that user embedding and this new product's embedding with their rating score on this new product. Tried extending the same experiment as a multi-class classification problem to understand if collaborative filtering or a neural network could be accurate at rating score classification, but both are doing worst. For this data, it can be inferred that review texts (rather their embeddings) show very reliable correlation with positive and negative sentiment classes but very poor correlation with 5 types of rating scores.
 
+## Retrieval Augmented Generation
+
+### Code Walkthroughs
+
+1. https://github.com/mrdbourke/simple-local-rag: All the way from PDF ingestion to "chat with PDF" style features using open-source tools.
+
 ## Working With Foundation Model Services
 
 ### Rate Limiting
